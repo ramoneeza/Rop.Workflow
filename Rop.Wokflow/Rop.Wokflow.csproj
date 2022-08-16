@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Title>Rop.Workflow</Title>
+	  <RootNamespace>Rop.Workflow</RootNamespace>
+	  <PackageTags>workflow;library;net60</PackageTags>
+	  <Description>Simple Workflow engine</Description>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Version>1.0.1</Version>
+	  <Authors>Ramon Ordiales Plaza</Authors>
+	  <Company>Ramon Ordiales Plaza</Company>
+	  <Copyright>2022 Ramon Ordiales</Copyright>
+	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+	  <RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/ramoneeza/Rop.Workflow</PackageProjectUrl>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+	  <PackageId>Rop.Workflow</PackageId>
+  </PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Packs\**" />
+		<EmbeddedResource Remove="Packs\**" />
+		<None Remove="Packs\**" />
+		<None Include="..\Readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
